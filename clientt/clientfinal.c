@@ -249,7 +249,7 @@ void show_server_file_menu(const char *role, int sock, unsigned char *key, unsig
             int content_len = 0;
             
             while (fgets(line, sizeof(line), stdin) != NULL) {
-                if (line[0] == '\n') break;  // Empty line (double Enter) to finish
+                if (line[0] == '\n') break; 
                 strcat(content, line);
                 content_len += strlen(line);
                 if (content_len >= BUFFER_SIZE - 256) break;  // Safety check
@@ -524,7 +524,7 @@ void show_client_file_menu(const char *role, int sock, unsigned char *key, unsig
             int content_len = 0;
             
             while (fgets(line, sizeof(line), stdin) != NULL) {
-                if (line[0] == '\n') break;  // Empty line (double Enter) to finish
+                if (line[0] == '\n') break;  
                 strcat(content, line);
                 content_len += strlen(line);
                 if (content_len >= BUFFER_SIZE - 256) break;  // Safety check
